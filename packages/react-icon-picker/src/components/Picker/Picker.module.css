@@ -1,4 +1,4 @@
-.r3ip__custom-select {
+.r3ipCustomSelect {
   position: relative;
   width: 100%;
   text-align: left;
@@ -6,7 +6,7 @@
   min-width: 200px;
 }
 
-.r3ip__custom-select .r3ip__selected {
+.r3ipCustomSelect .r3ipSelected {
   background-color: #fff;
   border-radius: 6px;
   border: 1px solid rgb(224, 224, 230);
@@ -19,69 +19,69 @@
   align-items: center;
 }
 
-.r3ip__custom-select.r3ip__small {
+.r3ipCustomSelect.r3ipSmall {
   height: 24px;
   line-height: 24px;
 }
 
-.r3ip__custom-select.r3ip__small .r3ip__selected {
+.r3ipCustomSelect.r3ipSmall .r3ipSelected {
   min-height: 24px;
 }
 
-.r3ip__custom-select.r3ip__medium {
+.r3ipCustomSelect.r3ipMedium {
   height: 34px;
   line-height: 34px;
 }
 
-.r3ip__custom-select.r3ip__medium .r3ip__selected {
+.r3ipCustomSelect.r3ipMedium .r3ipSelected {
   min-height: 34px;
 }
 
-.r3ip__custom-select.r3ip__large {
+.r3ipCustomSelect.r3ipLarge {
   height: 40px;
   line-height: 40px;
 }
 
-.r3ip__custom-select.r3ip__large .r3ip__selected {
+.r3ipCustomSelect.r3ipLarge .r3ipSelected {
   min-height: 40px;
 }
 
-.r3ip__custom-select .r3ip__selected .multiple {
+.r3ipCustomSelect .r3ipSelected .multiple {
   align-items: center;
   display: flex;
 }
 
-.r3ip__custom-select .r3ip__selected .multiple .item {
-  display: inline-block;
+.r3ipCustomSelect .r3ipSelected .multiple .item {
+  display: flex;
   margin-right: 10px;
 }
 
-.r3ip__custom-select .r3ip__selected .placeholder {
+.r3ipCustomSelect .r3ipSelected .placeholder {
   color: silver;
 }
 
-.r3ip__custom-select .r3ip__selected.open {
+.r3ipCustomSelect .r3ipSelected.open {
   border: 1px solid #c2c2c2;
   border-radius: 6px 6px 0px 0px;
 }
 
-.r3ip__custom-select .r3ip__selected.open:after {
+.r3ipCustomSelect .r3ipSelected.open:after {
   transform: rotate(180deg);
 }
 
-.r3ip__custom-select.r3ip__small .r3ip__selected.open:after {
+.r3ipCustomSelect.r3ipSmall .r3ipSelected.open:after {
   top: 5px;
 }
 
-.r3ip__custom-select.r3ip__medium .r3ip__selected.open:after {
+.r3ipCustomSelect.r3ipMedium .r3ipSelected.open:after {
   top: 10px;
 }
 
-.r3ip__custom-select.r3ip__large .r3ip__selected.open:after {
+.r3ipCustomSelect.r3ipLarge .r3ipSelected.open:after {
   top: 14px;
 }
 
-.r3ip__custom-select .r3ip__selected:after {
+.r3ipCustomSelect .r3ipSelected:after {
   position: absolute;
   content: '';
   right: 1em;
@@ -92,24 +92,24 @@
   transition: transform 0.2s ease;
 }
 
-.r3ip__custom-select.r3ip__small .r3ip__selected:after {
+.r3ipCustomSelect.r3ipSmall .r3ipSelected:after {
   top: 12px;
 }
 
-.r3ip__custom-select.r3ip__medium .r3ip__selected:after {
+.r3ipCustomSelect.r3ipMedium .r3ipSelected:after {
   top: 16px;
 }
 
-.r3ip__custom-select.r3ip__large .r3ip__selected:after {
+.r3ipCustomSelect.r3ipLarge .r3ipSelected:after {
   top: 20px;
 }
 
-.r3ip__custom-select .r3ip__selected.disabled {
+.r3ipCustomSelect .r3ipSelected.disabled {
   cursor: default;
   background-color: whitesmoke;
 }
 
-.r3ip__dropdown {
+.r3ipDropdown {
   opacity: 0;
   visibility: hidden;
   transition:
@@ -118,13 +118,13 @@
   pointer-events: none;
 }
 
-.r3ip__dropdown.r3ip__dropdown--open {
+.r3ipDropdown.r3ipDropdownOpen {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.r3ip__custom-select .r3ip__items {
+.r3ipCustomSelect .r3ipItems {
   color: #222;
   border-radius: 0px 0px 6px 6px;
   overflow: hidden;
@@ -139,7 +139,7 @@
   max-height: 225px;
 }
 
-.r3ip__grid-item {
+.r3ipGridItem {
   color: #222;
   cursor: pointer;
   user-select: none;
@@ -150,15 +150,15 @@
   box-sizing: border-box;
 }
 
-.r3ip__grid-item:hover {
+.r3ipGridItem:hover {
   background-color: rgb(243, 243, 245);
 }
 
-.r3ip__grid-item.active {
+.r3ipGridItem.active {
   background-color: var(--selected-icon-bg-color, #d3d3d3);
 }
 
-.r3ip__search {
+.r3ipSearch {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -166,8 +166,8 @@
   z-index: 1;
 }
 
-.r3ip__search input,
-.r3ip__search input:focus-visible {
+.r3ipSearch input,
+.r3ipSearch input:focus-visible {
   width: 100%;
   border-radius: 0;
   line-height: 30px;
@@ -178,17 +178,17 @@
   background: #fff;
 }
 
-.r3ip__search input:focus-visible {
+.r3ipSearch input:focus-visible {
   border: 0.5px solid #c2c2c2;
   border-top: none;
   outline: 0;
 }
 
-.r3ip__search input::placeholder {
+.r3ipSearch input::placeholder {
   color: #c2c2c2;
 }
 
-.r3ip__empty {
+.r3ipEmpty {
   border-radius: 0px 0px 6px 6px;
   border-right: 1px solid #c2c2c2;
   border-left: 1px solid #c2c2c2;
@@ -200,65 +200,65 @@
   z-index: 1;
 }
 
-.r3ip__empty > .default-text {
+.r3ipEmpty > .defaultText {
   text-align: center;
 }
 
 /* Dark theme */
-.r3ip__dark.r3ip__custom-select .r3ip__selected {
+.r3ipDark.r3ipCustomSelect .r3ipSelected {
   background-color: #1f1f23;
   border-color: #3a3a3f;
   color: #e5e7eb;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__selected .placeholder {
+.r3ipDark.r3ipCustomSelect .r3ipSelected .placeholder {
   color: #9ca3af;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__selected.open {
+.r3ipDark.r3ipCustomSelect .r3ipSelected.open {
   border-color: #52525b;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__selected:after {
+.r3ipDark.r3ipCustomSelect .r3ipSelected:after {
   border-color: #e5e7eb transparent transparent transparent;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__selected.disabled {
+.r3ipDark.r3ipCustomSelect .r3ipSelected.disabled {
   background-color: #2a2a2e;
   color: #6b7280;
   cursor: not-allowed;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__items {
+.r3ipDark.r3ipCustomSelect .r3ipItems {
   background-color: #1f1f23;
   border-color: #3a3a3f;
   color: #e5e7eb;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__grid-item {
+.r3ipDark.r3ipCustomSelect .r3ipGridItem {
   color: #e5e7eb;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__grid-item:hover {
+.r3ipDark.r3ipCustomSelect .r3ipGridItem:hover {
   background-color: #2a2a2e;
 }
 
-.r3ip__dark.r3ip__custom-select .r3ip__grid-item.active {
+.r3ipDark.r3ipCustomSelect .r3ipGridItem.active {
   background-color: var(--selected-icon-bg-color, #d3d3d3);
 }
 
-.r3ip__dark .r3ip__search input,
-.r3ip__dark .r3ip__search input:focus-visible {
+.r3ipDark .r3ipSearch input,
+.r3ipDark .r3ipSearch input:focus-visible {
   background-color: #1f1f23;
   border-color: #3a3a3f;
   color: #e5e7eb;
 }
 
-.r3ip__dark .r3ip__search input::placeholder {
+.r3ipDark .r3ipSearch input::placeholder {
   color: #9ca3af;
 }
 
-.r3ip__dark .r3ip__empty {
+.r3ipDark .r3ipEmpty {
   background-color: #1f1f23;
   border-color: #3a3a3f;
   color: #9ca3af;

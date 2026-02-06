@@ -19,8 +19,8 @@ export default defineConfig({
     alias: {
       '@arkn/react-icon-picker':
         process.env.NODE_ENV === 'production'
-          ? 'react-icon-picker'
-          : 'react-icon-picker/src/index.ts',
+          ? '@arkn/react-icon-picker'
+          : '@arkn/react-icon-picker/src/index.ts',
     },
     dedupe: ['react', 'react-dom'],
   },

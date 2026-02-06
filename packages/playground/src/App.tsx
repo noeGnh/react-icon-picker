@@ -1,34 +1,114 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { useState } from 'react'
+import {IconPicker, type IconLibrary} from '@arkn/react-icon-picker'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const ICON_LIBRARIES: IconLibrary[] = [
+  'antd', 'carbon', 'fa', 'fluent',
+  'ionicons4', 'ionicons5', 'material', 'tabler'
+]
+
+type InputSize = 'small' | 'medium' | 'large'
+
+const App: React.FC = () => {
+  // States
+  const [selection, setSelection] = useState<any>(null)
+  const [darkMode, setDarkMode] = useState<boolean>(false)
+  const [clearable, setClearable] = useState<boolean>(false)
+  const [multipleSelection, setMultipleSelection] = useState<boolean>(false)
+  const [selectedLibraries, setSelectedLibraries] = useState<IconLibrary[]>(['fa'])
+  const [inputSize, setInputSize] = useState<InputSize>('medium')
+
+  // Logique métier
+  const isSelected = (lib: IconLibrary) => selectedLibraries.includes(lib)
+
+  const toggleSelectedLibraries = (lib: IconLibrary) => {
+    setSelectedLibraries(prev =>
+      prev.includes(lib)
+        ? prev.filter(l => l !== lib)
+        : [...prev, lib]
+    )
+  }
+
+  const toggleMultipleSelection = () => {
+    setSelection(null)
+    setMultipleSelection(!multipleSelection)
+    if (!multipleSelection) {
+      setClearable(false)
+    }
+  }
+
+  const toggleDarkMode = () => setDarkMode(!darkMode)
+
+  const toggleClearable = () => {
+    if (multipleSelection) return
+    setClearable(!clearable)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <section className="container">
+      <h2>D E M O</h2>
+
+      <h4>Icon libraries to display</h4>
+      <div className="buttons">
+        {ICON_LIBRARIES.map((lib) => (
+          <div
+            key={lib}
+            className={`button ${isSelected(lib) ? 'selected' : ''}`}
+            onClick={() => toggleSelectedLibraries(lib)}>
+            {lib}
+          </div>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      <h4>Input sizes</h4>
+      <div className="buttons">
+        {(['small', 'medium', 'large'] as InputSize[]).map((size) => (
+          <div
+            key={size}
+            className={`button ${inputSize === size ? 'selected' : ''}`}
+            onClick={() => setInputSize(size)}>
+            {size.charAt(0).toUpperCase() + size.slice(1)}
+          </div>
+        ))}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+      <h4>Other options</h4>
+      <div className="buttons">
+        <div
+          className={`button ${multipleSelection ? 'selected' : ''}`}
+          onClick={toggleMultipleSelection}>
+          Multiple selection
+        </div>
+        <div
+          className={`button ${darkMode ? 'selected' : ''}`}
+          onClick={toggleDarkMode}>
+          Dark mode
+        </div>
+        <div
+          className={`button ${clearable ? 'selected' : ''} ${multipleSelection ? 'disabled' : ''}`}
+          onClick={toggleClearable}>
+          Make clearable
+        </div>
+      </div>
+
+      <hr />
+
+      <IconPicker
+        value={selection}
+        onChange={setSelection}
+        valueType="svg"
+        iconLibrary={selectedLibraries}
+        multiple={multipleSelection}
+        clearable={clearable}
+        selectedIconBgColor="#6495ED"
+        selectedIconColor="white"
+        placeholder="Select icon(s)"
+        style={{ width: '350px', marginTop: '15px' }}
+        inputSize={inputSize}
+        theme={darkMode ? 'dark' : 'light'}
+      />
+    </section>
   )
 }
 

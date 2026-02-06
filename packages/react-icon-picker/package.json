@@ -1,7 +1,7 @@
 {
   "name": "@arkn/react-icon-picker",
   "description": "React Icon Picker",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": false,
   "author": "Noé Gnanih <noegnanih@gmail.com>",
   "license": "MIT",

@@ -47,10 +47,12 @@ export type IconPickerProps = {
   inputSize?: InputSize
   theme?: Theme
   emptySlot?: React.ReactNode
+  style?: React.CSSProperties
 } & React.HTMLAttributes<HTMLElement>
 
 export type IconProps = {
   data: string | null
   color?: string
   size?: number | string
+  style?: React.CSSProperties
 } & React.HTMLAttributes<HTMLElement>

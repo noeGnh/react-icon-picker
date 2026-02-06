@@ -5,7 +5,7 @@ import { getIconFromCache } from '../../cache'
 import type { Icon, IconLibrary, IconPickerProps } from '../../types'
 import { isSVG, useIconsLoader } from '../../utils'
 import { Icon as ItemIcon } from '../Icon'
-import './Picker.module.css'
+import styles from './Picker.module.css'
 
 const Picker: React.FC<IconPickerProps> = ({
   value,
@@ -30,6 +30,7 @@ const Picker: React.FC<IconPickerProps> = ({
   inputSize = 'medium',
   theme = 'light',
   emptySlot,
+  style,
 }) => {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [open, setOpen] = useState<boolean>(false)
@@ -212,7 +213,7 @@ const Picker: React.FC<IconPickerProps> = ({
     return (
       <div
         style={style}
-        className={`v3ip__grid-item ${isIconSelected(item) ? 'active' : ''}`}
+        className={`${styles.r3ipGridItem} ${isIconSelected(item) ? styles.active : ''}`}
         onClick={() => onSelected(item)}>
         <ItemIcon
           data={item.svgUrl}
@@ -232,24 +233,25 @@ const Picker: React.FC<IconPickerProps> = ({
   return (
     <div
       ref={pickerRef}
-      className={`v3ip__custom-select v3ip__${inputSize} v3ip__${theme}`}
+      className={`${styles.r3ipCustomSelect} ${styles[`r3ip${inputSize.charAt(0).toUpperCase() + inputSize.slice(1)}`]} ${styles[`r3ip${theme.charAt(0).toUpperCase() + theme.slice(1)}`]}`}
       style={
         {
           '--selected-icon-bg-color': selectedIconBgColor,
+          ...style,
         } as React.CSSProperties
       }>
       <div
-        className={`v3ip__selected ${open ? 'open' : ''} ${disabled ? 'disabled' : ''}`}
+        className={`${styles.r3ipSelected} ${open ? styles.open : ''} ${disabled ? styles.disabled : ''}`}
         onClick={handleToggle}>
         {((!multiple && value) || (multiple && Array.isArray(value) && value.length)) ? (
           <>
             {multiple ? (
-              <div className="multiple">
+              <div className={styles.multiple}>
                 {Array.isArray(value) &&
                   value.map((val, i) => (
                     <React.Fragment key={i}>
                       {i < selectedItemsToDisplay && (
-                        <div className="item">
+                        <div className={styles.item}>
                           <ItemIcon
                             data={getSvgCodeOrUrl(val)}
                             size={20}
@@ -266,7 +268,7 @@ const Picker: React.FC<IconPickerProps> = ({
                     </React.Fragment>
                   ))}
                 {Array.isArray(value) && value.length > selectedItemsToDisplay && (
-                  <div className="item">
+                  <div className={styles.item}>
                     <b>+{value.length - selectedItemsToDisplay}</b>
                   </div>
                 )}
@@ -284,13 +286,13 @@ const Picker: React.FC<IconPickerProps> = ({
             )}
           </>
         ) : (
-          <span className="placeholder">{placeholder}</span>
+          <span className={styles.placeholder}>{placeholder}</span>
         )}
       </div>
 
-      <div className={`v3ip__dropdown ${open ? 'v3ip__dropdown--open' : ''}`}>
+      <div className={`${styles.r3ipDropdown} ${open ? styles.r3ipDropdownOpen : ''}`}>
         {displaySearch && (
-          <div className="v3ip__search">
+          <div className={styles.r3ipSearch}>
             <input
               type="text"
               name="search"
@@ -302,11 +304,11 @@ const Picker: React.FC<IconPickerProps> = ({
         )}
 
         {filteredIcons && filteredIcons.length ? (
-          <div ref={scrollerRef} className="v3ip__items">
+          <div ref={scrollerRef} className={styles.r3ipItems}>
             {scrollerWidth > 0 && (
               <Grid
                 columnCount={columnCount}
-                columnWidth={columnWidth}
+                columnWidth={columnWidth - 5}
                 height={Math.min(225, rowCount * rowHeight)}
                 rowCount={rowCount}
                 rowHeight={rowHeight}
@@ -316,9 +318,9 @@ const Picker: React.FC<IconPickerProps> = ({
             )}
           </div>
         ) : (
-          <div className="v3ip__empty">
+          <div className={styles.r3ipEmpty}>
             {emptySlot || (
-              <div className="default-text">
+              <div className={styles.defaultText}>
                 <small>{emptyText}</small>
               </div>
             )}
