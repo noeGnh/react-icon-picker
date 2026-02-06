@@ -1,7 +1,8 @@
+/// <reference types="vitest"/>
 import react from '@vitejs/plugin-react'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { defineConfig } from 'vite'
+import { defineConfig, type UserConfig } from 'vite'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -13,14 +14,10 @@ export default defineConfig({
     lib: {
       name: 'ReactIconPicker',
       entry: {
-        index: resolve(__dirname, 'src/index.tsx'),
-        'hooks/index': resolve(__dirname, 'src/hooks/index.ts'),
+        index: resolve(__dirname, 'src/index.ts'),
       },
       formats: ['es', 'cjs'],
-      fileName: (format, entryName) => {
-        if (entryName === 'hooks/index') {
-          return `hooks/index.${format === 'es' ? 'mjs' : 'cjs'}`
-        }
+      fileName: (format) => {
         return `index.${format === 'es' ? 'mjs' : 'cjs'}`
       },
     },
@@ -41,4 +38,4 @@ export default defineConfig({
       localsConvention: 'camelCase',
     },
   },
-})
+}) as UserConfig

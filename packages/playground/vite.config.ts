@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import react from '@vitejs/plugin-react-swc'
 // import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
@@ -16,7 +17,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'react-icon-picker':
+      '@arkn/react-icon-picker':
         process.env.NODE_ENV === 'production'
           ? 'react-icon-picker'
           : 'react-icon-picker/src/index.ts',
@@ -30,7 +31,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ['react-icon-picker'],
+    exclude: ['@arkn/react-icon-picker'],
   },
   server: {
     port: 4320,

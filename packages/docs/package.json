@@ -20,7 +20,7 @@
     "lint": "eslint '.vitepress/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "react-icon-picker": "workspace:*"
+    "@arkn/react-icon-picker": "workspace:*"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"
