@@ -44,7 +44,7 @@
     "react-window": "^1.8.10"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
+    "@eslint/js": "^9.39.2",
     "@sicons/antd": "^0.13.0",
     "@sicons/carbon": "^0.13.0",
     "@sicons/fa": "^0.13.0",
