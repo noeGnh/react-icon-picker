@@ -1,0 +1,272 @@
+._reactIconPickerIcon_hpd6d_1 svg {
+  display: block;
+  width: var(--icon-size, 24px);
+  height: var(--icon-size, 24px);
+  color: var(--icon-color);
+  fill: var(--icon-color);
+}
+._r3ipCustomSelect_7h5gk_1 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  min-width: 200px;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9 {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid rgb(224, 224, 230);
+  color: #333639;
+  padding-left: 1em;
+  padding-right: 1.4em;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipSmall_7h5gk_22 {
+  height: 24px;
+  line-height: 24px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipSmall_7h5gk_22 ._r3ipSelected_7h5gk_9 {
+  min-height: 24px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipMedium_7h5gk_31 {
+  height: 34px;
+  line-height: 34px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipMedium_7h5gk_31 ._r3ipSelected_7h5gk_9 {
+  min-height: 34px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipLarge_7h5gk_40 {
+  height: 40px;
+  line-height: 40px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipLarge_7h5gk_40 ._r3ipSelected_7h5gk_9 {
+  min-height: 40px;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9 ._multiple_7h5gk_49 {
+  align-items: center;
+  display: flex;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9 ._multiple_7h5gk_49 ._item_7h5gk_54 {
+  display: flex;
+  margin-right: 10px;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9 ._placeholder_7h5gk_59 {
+  color: silver;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9._open_7h5gk_63 {
+  border: 1px solid #c2c2c2;
+  border-radius: 6px 6px 0px 0px;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9._open_7h5gk_63:after {
+  transform: rotate(180deg);
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipSmall_7h5gk_22 ._r3ipSelected_7h5gk_9._open_7h5gk_63:after {
+  top: 5px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipMedium_7h5gk_31 ._r3ipSelected_7h5gk_9._open_7h5gk_63:after {
+  top: 10px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipLarge_7h5gk_40 ._r3ipSelected_7h5gk_9._open_7h5gk_63:after {
+  top: 14px;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9:after {
+  position: absolute;
+  content: '';
+  right: 1em;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: #333639 transparent transparent transparent;
+  transition: transform 0.2s ease;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipSmall_7h5gk_22 ._r3ipSelected_7h5gk_9:after {
+  top: 12px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipMedium_7h5gk_31 ._r3ipSelected_7h5gk_9:after {
+  top: 16px;
+}
+
+._r3ipCustomSelect_7h5gk_1._r3ipLarge_7h5gk_40 ._r3ipSelected_7h5gk_9:after {
+  top: 20px;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9._disabled_7h5gk_107 {
+  cursor: default;
+  background-color: whitesmoke;
+}
+
+._r3ipDropdown_7h5gk_112 {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+  pointer-events: none;
+}
+
+._r3ipDropdown_7h5gk_112._r3ipDropdownOpen_7h5gk_121 {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+._r3ipCustomSelect_7h5gk_1 ._r3ipItems_7h5gk_127 {
+  color: #222;
+  border-radius: 0px 0px 6px 6px;
+  overflow: hidden;
+  border-right: 1px solid #c2c2c2;
+  border-left: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  max-height: 225px;
+}
+
+._r3ipGridItem_7h5gk_142 {
+  color: #222;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+._r3ipGridItem_7h5gk_142:hover {
+  background-color: rgb(243, 243, 245);
+}
+
+._r3ipGridItem_7h5gk_142._active_7h5gk_157 {
+  background-color: var(--selected-icon-bg-color, #d3d3d3);
+}
+
+._r3ipSearch_7h5gk_161 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+._r3ipSearch_7h5gk_161 input,
+._r3ipSearch_7h5gk_161 input:focus-visible {
+  width: 100%;
+  border-radius: 0;
+  line-height: 30px;
+  border: 0.5px solid #c2c2c2;
+  border-top: none;
+  padding-right: 1em;
+  padding-left: 1em;
+  background: #fff;
+}
+
+._r3ipSearch_7h5gk_161 input:focus-visible {
+  border: 0.5px solid #c2c2c2;
+  border-top: none;
+  outline: 0;
+}
+
+._r3ipSearch_7h5gk_161 input::placeholder {
+  color: #c2c2c2;
+}
+
+._r3ipEmpty_7h5gk_191 {
+  border-radius: 0px 0px 6px 6px;
+  border-right: 1px solid #c2c2c2;
+  border-left: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+  background-color: #fff;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+._r3ipEmpty_7h5gk_191 > ._defaultText_7h5gk_203 {
+  text-align: center;
+}
+
+/* Dark theme */
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9 {
+  background-color: #1f1f23;
+  border-color: #3a3a3f;
+  color: #e5e7eb;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9 ._placeholder_7h5gk_59 {
+  color: #9ca3af;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9._open_7h5gk_63 {
+  border-color: #52525b;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9:after {
+  border-color: #e5e7eb transparent transparent transparent;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipSelected_7h5gk_9._disabled_7h5gk_107 {
+  background-color: #2a2a2e;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipItems_7h5gk_127 {
+  background-color: #1f1f23;
+  border-color: #3a3a3f;
+  color: #e5e7eb;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipGridItem_7h5gk_142 {
+  color: #e5e7eb;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipGridItem_7h5gk_142:hover {
+  background-color: #2a2a2e;
+}
+
+._r3ipDark_7h5gk_208._r3ipCustomSelect_7h5gk_1 ._r3ipGridItem_7h5gk_142._active_7h5gk_157 {
+  background-color: var(--selected-icon-bg-color, #d3d3d3);
+}
+
+._r3ipDark_7h5gk_208 ._r3ipSearch_7h5gk_161 input,
+._r3ipDark_7h5gk_208 ._r3ipSearch_7h5gk_161 input:focus-visible {
+  background-color: #1f1f23;
+  border-color: #3a3a3f;
+  color: #e5e7eb;
+}
+
+._r3ipDark_7h5gk_208 ._r3ipSearch_7h5gk_161 input::placeholder {
+  color: #9ca3af;
+}
+
+._r3ipDark_7h5gk_208 ._r3ipEmpty_7h5gk_191 {
+  background-color: #1f1f23;
+  border-color: #3a3a3f;
+  color: #9ca3af;
+}
