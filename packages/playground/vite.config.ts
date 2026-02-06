@@ -1,48 +1,27 @@
-import vue from '@vitejs/plugin-vue'
-import AutoImport from 'unplugin-auto-import/vite'
+import react from '@vitejs/plugin-react-swc'
+// import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 
 process.env.NODE_ENV
 export default defineConfig({
   plugins: [
-    vue(),
-    AutoImport({
-      // targets to transform
-      include: [
-        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-        /\.vue$/,
-        /\.vue\?vue/, // .vue
-        /\.md$/, // .md
-      ],
-      // global imports to register
-      imports: [
-        // presets
-        'vue',
-      ],
-
-      // Auto import for module exports under directories
-      // by default it only scan one level of modules under the directory
-      dirs: [],
-
-      // Auto import inside Vue template
-      // see https://github.com/unjs/unimport/pull/15 and https://github.com/unjs/unimport/pull/72
-      vueTemplate: true,
-
-      eslintrc: {
-        enabled: true, // Default `false`
-        filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
-        globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
-      },
-    }),
+    react(),
+    /* visualizer({
+      filename: 'dist/stats.html',
+      open: true, // open in browser
+      gzipSize: true,
+      brotliSize: true,
+      template: 'treemap', // or 'sunburst', 'network'
+    }), */
   ],
   resolve: {
     alias: {
-      'vue3-plugin':
+      'react-icon-picker':
         process.env.NODE_ENV === 'production'
-          ? 'vue3-plugin'
-          : 'vue3-plugin/src/index.ts',
+          ? 'react-icon-picker'
+          : 'react-icon-picker/src/index.ts',
     },
-    dedupe: ['vue'],
+    dedupe: ['react', 'react-dom'],
   },
   build: {
     minify: false,
@@ -51,7 +30,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ['vue3-plugin'],
+    exclude: ['react-icon-picker'],
   },
   server: {
     port: 4320,

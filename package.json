@@ -1,7 +1,7 @@
 {
-  "name": "vue3-plugin-monorepo-template",
+  "name": "react-icon-picker-monorepo",
   "version": "0.1.0",
-  "description": "A monorepo template for developing Vue libraries",
+  "description": "A monorepo template for developing React libraries",
   "author": "Noé Gnanih <noegnanih@gmail.com>",
   "license": "MIT",
   "private": true,
@@ -11,13 +11,13 @@
   "scripts": {
     "docs": "pnpm -F docs run dev",
     "dev": "pnpm -F playground run dev",
-    "test": "pnpm -F vue3-plugin run test",
+    "test": "pnpm -F react-icon-picker run test",
     "build": "pnpm build-plugin && pnpm build-playground && pnpm build-docs",
-    "build-plugin": "pnpm -r -F vue3-plugin run build",
+    "build-plugin": "pnpm -r -F react-icon-picker run build",
     "build-playground": "pnpm -F playground run build",
     "build-docs": "pnpm -F docs run build",
-    "lint": "eslint --ext .js,.ts,.vue .",
-    "lint:fix": "eslint --ext .js,.ts,.vue . --fix",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "lint:fix": "eslint --ext .js,.ts,.tsx . --fix",
     "format": "prettier . --write",
     "commit": "git add --all && git commit",
     "commit-push": "git add --all && git commit && git push origin --all",
@@ -29,37 +29,27 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,ts,vue}": [
+    "**/*.{js,ts,tsx}": [
       "eslint . --fix",
       "prettier . --write"
     ]
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/node": "^18.19.130",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@tsconfig/node22": "^22.0.5",
+    "@types/node": "^25.2.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@vitejs/plugin-vue": "^4.6.2",
-    "@vue/compiler-dom": "^3.5.25",
-    "@vue/compiler-sfc": "^3.5.25",
-    "@vue/eslint-config-prettier": "^7.1.0",
-    "@vue/eslint-config-typescript": "^11.0.3",
-    "@vue/test-utils": "^2.4.6",
-    "@vue/tsconfig": "^0.1.3",
+    "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^8.57.1",
-    "eslint-import-resolver-typescript": "^3.10.1",
-    "eslint-plugin-prettier": "^4.2.5",
-    "eslint-plugin-vue": "^9.33.0",
-    "husky": "^8.0.3",
-    "jsdom": "^21.1.2",
-    "lint-staged": "^13.3.0",
-    "prettier": "^2.8.8",
-    "typescript": "^4.9.5",
-    "unplugin-auto-import": "^0.15.3",
-    "unplugin-vue-components": "^0.24.1",
-    "vite": "^4.5.14",
-    "vitest": "^0.28.5",
-    "vue": "^3.5.25",
-    "vue-tsc": "^1.8.27"
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
+    "jsdom": "^28.0.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
   }
 }

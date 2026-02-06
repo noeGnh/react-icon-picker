@@ -1,1 +1,1 @@
-# vue3-lib-monorepo-template
+# react-icon-picker

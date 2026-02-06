@@ -1,0 +1,75 @@
+{
+  "name": "react-icon-picker",
+  "description": "React Icon Picker",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Noé Gnanih <noegnanih@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./hooks": {
+      "types": "./types/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "README.md"
+  ],
+  "scripts": {
+    "dev-server": "pnpm --parallel vite",
+    "dev-types": "tsc  --noEmit -p tsconfig.app.json --watch",
+    "build": "pnpm build-lib && pnpm build-types",
+    "build-lib": "vite build",
+    "build-types": "rm -f *.tsbuildinfo && rm -rf types && tsc --emitDeclarationOnly --declaration -p tsconfig.app.json",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.9",
+    "lodash.clonedeep": "^4.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/lodash.clonedeep": "^4.5.9",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noeGnh/react-icon-picker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/noeGnh/react-icon-picker/issues"
+  },
+  "homepage": "https://github.com/noeGnh/react-icon-picker#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

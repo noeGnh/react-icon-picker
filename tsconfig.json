@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  },
   "files": [],
   "references": [
     {
@@ -6,10 +10,7 @@
     },
     // Plugin
     {
-      "path": "./packages/vue3-plugin/tsconfig.json"
-    },
-    {
-      "path": "./packages/vue3-plugin/tsconfig.vitest.json"
+      "path": "./packages/react-icon-picker/tsconfig.json"
     },
     // Playground
     {

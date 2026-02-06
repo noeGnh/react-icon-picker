@@ -8,21 +8,21 @@
   "license": "MIT",
   "main": "index.ts",
   "directories": {
-    "plugin": "vue3-plugin",
+    "plugin": "react-icon-picker",
     "test": "__tests__"
   },
   "files": [
-    "vue3-plugin"
+    "react-icon-picker"
   ],
   "scripts": {
     "dev": "vitepress dev .",
     "build": "vitepress build .",
-    "lint": "eslint '.vitepress/**/*.{ts,vue}'"
+    "lint": "eslint '.vitepress/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "vue3-plugin": "workspace:*"
+    "react-icon-picker": "workspace:*"
   },
   "devDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.4"
   }
 }

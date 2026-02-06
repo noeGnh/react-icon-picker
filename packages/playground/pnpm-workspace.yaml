@@ -1,7 +1,3 @@
-packages:
-  - packages/*
-
 onlyBuiltDependencies:
   - '@swc/core'
   - esbuild
-  - unrs-resolver
