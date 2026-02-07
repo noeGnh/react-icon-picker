@@ -5,7 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.0.1
+## [v0.0.2](https://github.com/noeGnh/react-icon-picker/compare/v0.0.1...v0.0.2)
+
+### Merged
+
+- build(deps-dev): bump typescript from 5.8.3 to 5.9.3 [`#8`](https://github.com/noeGnh/react-icon-picker/pull/8)
+- build(deps-dev): bump @eslint/js from 9.39.2 to 10.0.1 [`#9`](https://github.com/noeGnh/react-icon-picker/pull/9)
+- build(deps-dev): bump eslint-plugin-react-refresh from 0.4.26 to 0.5.0 [`#6`](https://github.com/noeGnh/react-icon-picker/pull/6)
+- build(deps-dev): bump @vitejs/plugin-react from 4.7.0 to 5.1.3 [`#7`](https://github.com/noeGnh/react-icon-picker/pull/7)
+
+### Commits
+
+- build: update some dependencies [`fb42855`](https://github.com/noeGnh/react-icon-picker/commit/fb428553012f43a60e4a56b0f145d2baecafc071)
+- fix: merge classname and style props better on components [`5a7f510`](https://github.com/noeGnh/react-icon-picker/commit/5a7f510c1a40315f633aacb882f0f3bb756b2199)
+- fix: add base path to playground vite config [`d8c3d12`](https://github.com/noeGnh/react-icon-picker/commit/d8c3d120ae1bdb402b2fe23c2c0bd61160abfed1)
+
+## v0.0.1 - 2026-02-06
 
 ### Merged
 
