@@ -4,7 +4,7 @@ import { isSVG, isURL, useIconsLoader } from '../../utils'
 import type { IconProps } from '../../types'
 import styles from './Icon.module.css'
 
-const Icon: React.FC<IconProps> = ({ data, color, size = 24, style, ...rest }) => {
+const Icon: React.FC<IconProps> = ({ data, color, size = 24, style: restStyle, className: restClassName, ...restProps }) => {
   const { prepareData } = useIconsLoader()
   const [svgCode, setSvgCode] = useState<string>('')
   const [isLoading, setIsLoading] = useState(false)
@@ -83,17 +83,17 @@ const Icon: React.FC<IconProps> = ({ data, color, size = 24, style, ...rest }) =
 
   return (
     <i
-      className={styles.reactIconPickerIcon}
+      className={`${styles.reactIconPickerIcon} ${restClassName || ''}`}
       style={
         {
           display: 'inline-block',
           lineHeight: 0,
           '--icon-size': computedSize,
           '--icon-color': color,
-          ...style,
+          ...restStyle,
         } as React.CSSProperties
       }
-      {...rest}
+      {...restProps}
       dangerouslySetInnerHTML={{ __html: svgCode }}
     />
   )

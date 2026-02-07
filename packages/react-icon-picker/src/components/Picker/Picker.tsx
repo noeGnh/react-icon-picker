@@ -30,7 +30,8 @@ const Picker: React.FC<IconPickerProps> = ({
   inputSize = 'medium',
   theme = 'light',
   emptySlot,
-  style,
+  style: restStyle,
+  className: restClassName,
 }) => {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [open, setOpen] = useState<boolean>(false)
@@ -233,11 +234,11 @@ const Picker: React.FC<IconPickerProps> = ({
   return (
     <div
       ref={pickerRef}
-      className={`${styles.r3ipCustomSelect} ${styles[`r3ip${inputSize.charAt(0).toUpperCase() + inputSize.slice(1)}`]} ${styles[`r3ip${theme.charAt(0).toUpperCase() + theme.slice(1)}`]}`}
+      className={`${styles.r3ipCustomSelect} ${styles[`r3ip${inputSize.charAt(0).toUpperCase() + inputSize.slice(1)}`]} ${styles[`r3ip${theme.charAt(0).toUpperCase() + theme.slice(1)}`]} ${restClassName}`}
       style={
         {
           '--selected-icon-bg-color': selectedIconBgColor,
-          ...style,
+          ...restStyle,
         } as React.CSSProperties
       }>
       <div
