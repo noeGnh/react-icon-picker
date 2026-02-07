@@ -14169,7 +14169,7 @@ const reactIconPickerIcon = "_reactIconPickerIcon_hpd6d_1";
 const styles$1 = {
   reactIconPickerIcon
 };
-const Icon = ({ data, color, size: size2 = 24, style, ...rest }) => {
+const Icon = ({ data, color, size: size2 = 24, style: restStyle, className: restClassName, ...restProps }) => {
   const { prepareData } = useIconsLoader();
   const [svgCode, setSvgCode] = reactExports.useState("");
   const [isLoading, setIsLoading] = reactExports.useState(false);
@@ -14234,15 +14234,15 @@ const Icon = ({ data, color, size: size2 = 24, style, ...rest }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "i",
     {
-      className: styles$1.reactIconPickerIcon,
+      className: `${styles$1.reactIconPickerIcon} ${restClassName || ""}`,
       style: {
         display: "inline-block",
         lineHeight: 0,
         "--icon-size": computedSize,
         "--icon-color": color,
-        ...style
+        ...restStyle
       },
-      ...rest,
+      ...restProps,
       dangerouslySetInnerHTML: { __html: svgCode }
     }
   );
@@ -14334,7 +14334,8 @@ const Picker = ({
   inputSize = "medium",
   theme = "light",
   emptySlot,
-  style
+  style: restStyle,
+  className: restClassName
 }) => {
   const [searchQuery, setSearchQuery] = reactExports.useState("");
   const [open2, setOpen] = reactExports.useState(false);
@@ -14463,14 +14464,14 @@ const Picker = ({
   const columnWidth = scrollerWidth / columnCount || 50;
   const rowHeight = 40;
   const rowCount = Math.ceil(filteredIcons.length / columnCount);
-  const Cell = ({ columnIndex, rowIndex, style: style2 }) => {
+  const Cell = ({ columnIndex, rowIndex, style }) => {
     const index = rowIndex * columnCount + columnIndex;
     if (index >= filteredIcons.length) return null;
     const item2 = filteredIcons[index];
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
       "div",
       {
-        style: style2,
+        style,
         className: `${styles.r3ipGridItem} ${isIconSelected(item2) ? styles.active : ""}`,
         onClick: () => onSelected(item2),
         children: /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -14488,10 +14489,10 @@ const Picker = ({
     "div",
     {
       ref: pickerRef,
-      className: `${styles.r3ipCustomSelect} ${styles[`r3ip${inputSize.charAt(0).toUpperCase() + inputSize.slice(1)}`]} ${styles[`r3ip${theme.charAt(0).toUpperCase() + theme.slice(1)}`]}`,
+      className: `${styles.r3ipCustomSelect} ${styles[`r3ip${inputSize.charAt(0).toUpperCase() + inputSize.slice(1)}`]} ${styles[`r3ip${theme.charAt(0).toUpperCase() + theme.slice(1)}`]} ${restClassName}`,
       style: {
         "--selected-icon-bg-color": selectedIconBgColor,
-        ...style
+        ...restStyle
       },
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
