@@ -68,7 +68,7 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "svgo": "^4.0.1",
-    "terser": "^5.46.1",
+    "terser": "^5.46.2",
     "tsx": "^4.21.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.1",
