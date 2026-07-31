@@ -107,8 +107,8 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0
       globals:
-        specifier: ^17.6.0
-        version: 17.6.0
+        specifier: ^17.8.0
+        version: 17.8.0
       typescript:
         specifier: ~6.0.3
         version: 6.0.3
@@ -189,8 +189,8 @@ importers:
         specifier: ^13.0.6
         version: 13.0.6
       globals:
-        specifier: ^17.6.0
-        version: 17.6.0
+        specifier: ^17.8.0
+        version: 17.8.0
       react:
         specifier: ^19.2.6
         version: 19.2.6
@@ -2295,8 +2295,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@17.6.0:
-    resolution: {integrity: sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==}
+  globals@17.8.0:
+    resolution: {integrity: sha512-Zz/LMDZScFmkakeL2cTHzf+PbWKdpU3uclqkZT7TjDG58j5WPt0PpA+n9uPI24fZtlw07q0OtEi84K+umsRzqQ==}
     engines: {node: '>=18'}
 
   globby@11.1.0:
@@ -5365,7 +5365,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@17.6.0: {}
+  globals@17.8.0: {}
 
   globby@11.1.0:
     dependencies:
