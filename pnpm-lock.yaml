@@ -76,8 +76,8 @@ importers:
         specifier: ^19.2.6
         version: 19.2.6
       react-dom:
-        specifier: ^19.2.6
-        version: 19.2.6(react@19.2.6)
+        specifier: ^19.2.8
+        version: 19.2.8(react@19.2.6)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -126,7 +126,7 @@ importers:
         version: 4.7.0
       react-window:
         specifier: ^2.2.7
-        version: 2.2.7(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        version: 2.2.7(react-dom@19.2.8(react@19.2.6))(react@19.2.6)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -169,7 +169,7 @@ importers:
         version: 19.2.3(@types/react@19.2.14)
       '@types/react-window':
         specifier: ^2.0.0
-        version: 2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        version: 2.0.0(react-dom@19.2.8(react@19.2.6))(react@19.2.6)
       '@vitejs/plugin-react':
         specifier: ^6.0.2
         version: 6.0.2(vite@8.0.14(@types/node@26.1.2)(esbuild@0.28.1)(terser@5.47.1)(tsx@4.23.1)(yaml@2.8.4))
@@ -195,8 +195,8 @@ importers:
         specifier: ^19.2.6
         version: 19.2.6
       react-dom:
-        specifier: ^19.2.6
-        version: 19.2.6(react@19.2.6)
+        specifier: ^19.2.8
+        version: 19.2.8(react@19.2.6)
       svgo:
         specifier: ^4.0.1
         version: 4.0.1
@@ -2814,10 +2814,10 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  react-dom@19.2.6:
-    resolution: {integrity: sha512-0prMI+hvBbPjsWnxDLxlCGyM8PN6UuWjEUCYmZhO67xIV9Xasa/r/vDnq+Xyq4Lo27g8QSbO5YzARu0D1Sps3g==}
+  react-dom@19.2.8:
+    resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
     peerDependencies:
-      react: ^19.2.6
+      react: ^19.2.8
 
   react-window@2.2.7:
     resolution: {integrity: sha512-SH5nvfUQwGHYyriDUAOt7wfPsfG9Qxd6OdzQxl5oQ4dsSsUicqQvjV7dR+NqZ4coY0fUn3w1jnC5PwzIUWEg5w==}
@@ -4308,9 +4308,9 @@ snapshots:
     dependencies:
       '@types/react': 19.2.14
 
-  '@types/react-window@2.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@types/react-window@2.0.0(react-dom@19.2.8(react@19.2.6))(react@19.2.6)':
     dependencies:
-      react-window: 2.2.7(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      react-window: 2.2.7(react-dom@19.2.8(react@19.2.6))(react@19.2.6)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -5844,15 +5844,15 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-dom@19.2.6(react@19.2.6):
+  react-dom@19.2.8(react@19.2.6):
     dependencies:
       react: 19.2.6
       scheduler: 0.27.0
 
-  react-window@2.2.7(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
+  react-window@2.2.7(react-dom@19.2.8(react@19.2.6))(react@19.2.6):
     dependencies:
       react: 19.2.6
-      react-dom: 19.2.6(react@19.2.6)
+      react-dom: 19.2.8(react@19.2.6)
 
   react@19.2.6: {}
 
